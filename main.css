@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Lobster&family=Permanent+Marker&family=Rubik+Glitch&display=swap');
+
+
+
+/* ========== Variables Css ========== */
+:root {
+
+  /* ----- Font ----- */
+  --head-font: 'Rubik Glitch', cursive;
+  --main-font: 'Aboreto', cursive;
+  --korean-font: 'Do Hyeon', sans-serif;
+
+  /* ----- Font Size ----- */
+  --head-size: 2.5rem;
+
+
+  /* ----- Color ----- */
+  --nav-hover: rgb(187, 187, 187);
+}
+
+
+
+/* Base Setting */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: black;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* ========== Header Nav ========== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+}
+
+.nav {
+  position: relative;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav .navName {
+  font-family: var(--head-font);
+  color: black;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  font-size: var(--head-size);
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.navToggle {
+  color: black;
+  font-size: 1.5rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .navMenu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    padding-block: 3.5rem 3rem;
+    border-radius: 0 0 2rem 2rem;
+    transition: top .4s;
+  }
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1.5rem;
+}
+
+.navLink,
+.log-out {
+  color: white;
+  font-family: var(--main-font);
+  font-weight: 550;
+  font-size: 1.2rem;
+  transition: color .4s;
+  cursor: pointer;
+}
+
+.navLink:hover,
+.log-out:hover {
+  color: var(--nav-hover);
+}
+
+.navClose {
+  position: absolute;
+  color: white;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+/* Show Menu */
+.showMenu {
+  top: 0;
+}
+
+/* Change Background Header */
+.bg-header {
+  background-color: white;
+}
+
+
+
+
+
+/* ========== Main ========== */
+.main-container {
+  background: url('./img/backgroundExample5.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.id-container {
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  font-family: var(--korean-font);
+  font-size: 1.2rem;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.link-container {
+  width: 200vw;
+  display: flex;
+}
+
+.link {
+  width: 50vw;
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: 2rem;
+}
+
+.link h5 a,
+.carousel-logOut {
+  color: black;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.link h5 a:hover,
+.carousel-logOut:hover {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-container button {
+  border: none;
+  padding: 1.5rem;
+  background-color: transparent;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-container button:first-child:hover {
+  transform: translateX(-2rem);
+}
+
+.btn-container button:last-child:hover {
+  transform: translateX(2rem);
+}
+
+
+
+
+/* ========== Footer ========== */
+footer {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 5rem;
+}
+
+.infoContainer {
+  font-family: var(--korean-font);
+}
+
+.infoContainer h4 {
+  padding-top: 10px;
+}
+
+.infoContainer ul,
+li {
+  padding-top: 5px;
+}
+
+.infoContainer li {
+  font-size: .8rem;
+}
+
+.infoContainer a {
+  color: black;
+  cursor: pointer;
+}
+
+
+.socialmediaContainer {
+  display: flex;
+  column-gap: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem; 
+}
+
+.socialmediaLink {
+  font-size: 1.4rem;
+  color: black;
+  cursor: pointer;
+  transition: transform .4s;
+}
+
+.socialmediaLink:hover {
+  transform: translateY(-.25rem);
+}
+
+
+
+
+
+
+
+/* ========== scrollBar ========== */
+::-webkit-scrollbar {
+  width: .4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(71, 71, 71);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: black;
+}
+
+
+
+
+
+
+/* ========== Break Points ========== */
+/* For Small device */
+@media screen and (max-width: 767px) {
+  .main-container {
+    background-size: cover;
+  }
+
+  .link {
+    font-size: 1.5rem;
+  }
+
+  .btn-container button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .link,
+  .btn-container button {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* For Medium device */
+@media screen and (min-width: 768px) {
+  .navClose,
+  .navToggle {
+    display: none;
+  }
+
+  .navList {
+    flex-direction: row;
+    column-gap: 4rem;
+    padding-right: 1rem;
+  }
+
+  .navLink,
+  .log-out {
+    color: black;
+  }
+}
+
+
+
+@media screen and (min-width: 901px){
+
+  .footerContainer {
+    display: flex;
+    column-gap: 4rem;
+  }
+
+}
+
+
+
+
+/* For large devices */
+@media screen and (min-width: 1024px){
+
+  .nav {
+    margin: 0 3rem;
+  }
+
+  .footerContainer {
+    display: flex;
+    column-gap: 8rem;
+  }
+
+}

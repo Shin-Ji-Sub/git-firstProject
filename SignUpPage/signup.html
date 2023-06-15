@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./signup.css">
+  <title>Sign Up Page</title>
+</head>
+<body>
+  <header>
+    <nav>
+
+      <ul class="nav-container">
+        <li>
+          <div class="nav-list">
+            <h4><a href="./../index.html">NoName</a></h4>
+            <span></span>
+          </div>
+        </li>
+        <li>
+          <div class="nav-list">
+            <div><a href="./../ProductPage/product.html">Products</a></div>
+            <span></span>
+          </div>
+        </li>
+        <li>
+          <div class="nav-list">
+            <div><a href="./../CartPage/cart.html">Cart</a></div>
+            <span></span>
+          </div>
+        </li>
+        <li>
+          <div class="nav-list">
+            <div><a href="./../LoginPage/login.html">Log In</a></div>
+            <span></span>
+          </div>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <div class="main-name">
+        <h5>Sign Up</h5>
+        <span></span>
+      </div>
+
+      <div class="introduction">
+        <span class="hello">Hello,</span><p>We're NoName. Thank you for signing up.</p><span class="cursor"></span>
+      </div>
+
+      <form action="./../data/user.json" method="POST">
+        <div class="register-container">
+          <ul>
+            <li>
+              <label for="id">
+                ID<br>
+                <input class="id-input" type="text">
+              </label>
+              <p class="id-msg"></p>
+            </li>
+            <li>
+              <label for="password">
+                Password<br>
+                <input class="pw-input" type="password">
+              </label>
+              <p class="pw-msg"></p>
+            </li>
+            <li>
+              <label for="name">
+                Name<br>
+                <input class="name-input" type="text">
+              </label>
+              <p class="name-msg"></p>
+            </li>
+            <li>
+              <button class="register-btn"><a href="./../LoginPage/login.html">Register</a></button>
+            </li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="./signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./cart.css">
+  <title>Cart Page</title>
+</head>
+<body>
+  <header>
+    <nav>
+
+      <h4>
+        <a href="./../index.html">NoName</a>
+      </h4>
+      <div class="nav-container">
+        <ul>
+          <li><a href="./../ProductPage/product.html">Products</a></li>
+          <li><a href="./../CartPage/cart.html">Cart</a></li>
+          <li><a href="./../LoginPage/login.html">Log In</a></li>
+          <li><a href="./../SignUpPage/signup.html">Sign Up</a></li>
+          <!-- <li><div class="log-out">Log Out</div></li> -->
+        </ul>
+        <i class="fa-solid fa-toggle-on"></i>
+      </div>
+
+      <i class="fa-solid fa-toggle-off"></i>
+      
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="main-container">
+      <div class="name-container">
+        <h4>Cart</h4>
+        <div></div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Item Brand</th>
+              <th>Item Name</th>
+              <th>Item Size</th>
+              <th>Item Price</th>
+              <th>Item Quantity</th>
+              <th class="list-th">List</th>
+              <th class="btn-th">
+                <button class="delete-btn">Delete Checked Item</button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+
+      <div class="total-container">
+        <div class="totalName-container">
+          <h5>TOTAL</h5>
+          <div></div>
+        </div>
+        <div class="showTotal-container">
+          <div class="countNprice-container">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <p>총 수량:<span class="count">0</span></p>
+          </div>
+          <div class="countNprice-container">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <p>총 가격:<span class="price">0</span>$</p>
+          </div>
+          <button class="totalbuy-Btn">구매하기</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="./cart.js"></script>
+</body>
+</html>

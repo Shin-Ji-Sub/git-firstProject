@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Black+Han+Sans&family=Do+Hyeon&family=Jua&family=Lobster&family=Permanent+Marker&family=Rubik+Glitch&display=swap');
+
+/* ========== Variables Css ========== */
+:root {
+
+  /* ----- Font ----- */
+  --head-font: 'Rubik Glitch', cursive;
+  --main-font: 'Aboreto', cursive;
+  --korean-font: 'Do Hyeon', sans-serif;
+
+  /* ----- Font Size ----- */
+  --head-size: 2.5rem;
+
+  /* ----- Color ----- */
+  --nav-hover: rgb(187, 187, 187);
+}
+
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ===== Header & Nav ===== */
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  background: url('./../img/banner1.jpg');
+  background-position: center;
+  background-size: cover;
+  z-index: 100;
+  transition: all 0.4s;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  z-index: 101;
+}
+
+ul {
+  display: flex;
+  column-gap: 2rem;
+}
+
+nav h4 a {
+  color: white;
+  text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  font-family: var(--head-font);
+  font-size: 2.5rem;
+}
+
+nav ul li a,
+.log-out {
+  color: rgb(209, 209, 209);
+  font-family: var(--main-font);
+  font-size: 1.2rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+nav ul li a:hover,
+.search-icon:hover,
+.log-out:hover {
+  color: #fff;
+}
+
+.search-icon,
+.toggle-search-icon,
+.toggle-close-btn {
+  color: rgb(209, 209, 209);
+  font-size: 1.2rem;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+
+/* Toggle Navbar */
+
+.toggle-search-container {
+  display: none;
+}
+
+.fa-toggle-on {
+  display: none;
+}
+
+.fa-toggle-off {
+  display: none;
+}
+
+@media screen and (max-width: 767px){
+  .nav-container{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: url('./../img/banner1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-block: 2.5rem 2rem;
+    border-radius: 0 0 2rem 2rem;
+    transition: top .4s;
+  }
+
+  .nav-container ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+  }
+}
+
+.toggle-input {
+  display: none;
+  width: 15rem;
+  padding: 5px;
+}
+
+.toggle-close-btn {
+  display: none;
+  margin-left: .5rem;
+}
+
+
+
+/* Search */ 
+.search-container {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  z-index: 110;
+  transition: all 0.5s;
+}
+
+.search-container i {
+  font-size: 1.5rem;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.search:hover {
+  color: rgb(189, 123, 2);
+}
+
+.search-container input {
+  padding: .5rem;
+  width: 30%;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-left: 5px;
+  margin-right: 2rem;
+  font-size: 1rem;
+}
+
+
+
+/* ===== Main ===== */
+.main-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 3rem;
+  margin: 8rem 4rem 0;
+}
+
+.products-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-container h5 {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.products-container div {
+  position: absolute;
+  top: 1.5rem;
+  width: 12rem;
+  border: 1px solid black;
+}
+
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-items: center;
+  font-family: var(--main-font);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 1px solid rgb(126, 126, 126);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.card p:nth-child(3) {
+  font-size: 1.3rem;
+  font-family: var(--korean-font);
+}
+
+.card p:nth-child(4) {
+  font-size: 1.1rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card button {
+  font-family: var(--main-font);
+  width: 20%;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid rgb(58, 58, 58);
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.card button:hover {
+  width: 50%;
+}
+
+.more-btn {
+  visibility: visible;
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  padding: 5px;
+  margin-bottom: 1rem;
+  background: white;
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.scrollUp-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: -2rem;
+  padding: 10px;
+  border: none;
+  background: white;
+  font-size: 2rem;
+  color: rgb(68, 129, 88);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.scrollUp-btn:hover {
+  text-shadow: 3px 3px 0px rgb(107, 212, 142);
+  transform: translateY(-3vh);
+}
+
+
+/*
+////////
+Response
+////////
+*/
+
+@media screen and (min-width: 1250px) {
+  .item-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px){
+  .fa-toggle-off {
+    display: inline;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .fa-toggle-on {
+    display: inline;
+    position: absolute;
+    color: white;
+    top: 3rem;
+    right: 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .toggle-search-container {
+    display: inline;
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+  .main-container {
+    transition: all 0.3s;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .item-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
