@@ -46,9 +46,6 @@ a {
 
 
 
-
-
-
 /* ========== Header Nav ========== */
 .header {
   position: fixed;
@@ -142,8 +139,6 @@ a {
 
 
 
-
-
 /* ========== Main ========== */
 .main-container {
   background: url('./img/backgroundExample5.jpg');
@@ -213,7 +208,6 @@ a {
 
 
 
-
 /* ========== Footer ========== */
 footer {
   position: relative;
@@ -270,10 +264,6 @@ li {
 
 
 
-
-
-
-
 /* ========== scrollBar ========== */
 ::-webkit-scrollbar {
   width: .4rem;
@@ -289,10 +279,11 @@ li {
 
 
 
-
-
-
-/* ========== Break Points ========== */
+/*
+////////
+Response
+////////
+*/
 /* For Small device */
 @media screen and (max-width: 767px) {
   .main-container {
@@ -316,7 +307,6 @@ li {
 }
 
 
-
 /* For Medium device */
 @media screen and (min-width: 768px) {
   .navClose,
@@ -337,7 +327,6 @@ li {
 }
 
 
-
 @media screen and (min-width: 901px){
 
   .footerContainer {
@@ -346,8 +335,6 @@ li {
   }
 
 }
-
-
 
 
 /* For large devices */

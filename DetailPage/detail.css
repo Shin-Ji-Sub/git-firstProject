@@ -180,7 +180,6 @@ nav ul li a:hover,
 
 .detail-container {
   margin: 5rem;
-  height: 1500px;
 }
 
 .pic-container {
@@ -200,8 +199,8 @@ nav ul li a:hover,
 }
 
 .explain-container {
-  position: fixed;
-  top: 20rem;
+  position: sticky;
+  top: 10rem;
   left: 50%;
   width: 50%;
   display: flex;
@@ -296,5 +295,13 @@ Response
 
   .main-container {
     transition: all 0.3s;
+  }
+
+  .explain {
+    display: none;
+  }
+
+  .function-container {
+    padding-left: 3rem;
   }
 }

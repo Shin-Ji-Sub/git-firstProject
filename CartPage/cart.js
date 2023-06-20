@@ -110,8 +110,6 @@ function total(){
 
 total();
 
-
-
 $('.count-input').on('input', (e) => {
 
   let count = $(e.target).val();
@@ -144,7 +142,7 @@ $('.fa-toggle-on').click(() => {
 });
 
 
-// Log in Change UI
+// Log in Change  UI
 let nowUser = localStorage.getItem('nowUser');
 
 if(nowUser != undefined){
