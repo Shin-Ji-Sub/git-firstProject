@@ -2,12 +2,29 @@ let newArr = [];
 let cartArr = [];
 let detailArr = [];
 
+{/* <picture>
+  <source media="(max-width:360px)" srcset="./../img/f${value.id + 1}.webp">
+  <img src="./../img/f${value.id + 1}.webp" alt="item image">
+</picture> */}
+
+{/* <img src="./../img/f${value.id + 1}.webp" alt="item image" sizes="
+      (min-width: 1250px) 360w,
+      (max-width: 767px) 250w,
+      360w"
+      ></img> */}
+
 /* Make Card Function */
 function appendCard(value){
   let card = `
   <a href="./../DetailPage/detail.html">
     <div class="card" id=${value.id}>
-      <img src="./../img/f${value.id + 1}.jpg" alt="item image">
+      <picture>
+        <source srcset="./../img/f${value.id + 1}.webp" />
+        <img src="./../img/f${value.id + 1}.webp" alt="item image" sizes="
+        (min-width: 1250px) 360w,
+        (max-width: 767px) 250w,
+        360w">
+      </picture>
       <h5>${value.brand}</h5>
       <p>${value.title}</p>
       <p>${value.price}$</p>

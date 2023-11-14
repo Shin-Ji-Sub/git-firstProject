@@ -2,9 +2,9 @@ function detailCard(value){
   let card = `
   <div class="detail-container">
     <div class="pic-container">
-      <img class="img" src="./../img/f${value.id + 1}.jpg">
-      <img class="img" src="./../img/b1.jpg">
-      <img class="img" src="./../img/b4.jpg">
+      <img class="img" src="./../img/f${value.id + 1}.webp" alt="products pic">
+      <img class="img" src="./../img/b1.webp" alt="products pic">
+      <img class="img" src="./../img/b4.webp" alt="products pic">
     </div>
     <div class="explain-container">
       <div class="itemInfo-container">
@@ -23,7 +23,7 @@ function detailCard(value){
       <div class="function-container">
         <form action="#" class="select-container">
           <h4>사이즈</h4>
-          <select class="select" name="size">
+          <select class="select" name="size" aria-label="size">
             <option value="none">선택</option>
             <option value="small">Small Size</option>
             <option value="medium">Medium Size</option>
@@ -32,7 +32,7 @@ function detailCard(value){
         </form>
         <form action="#" class="quantity-container">
           <label for="quantity">수량</label>
-          <input value="1" type="number" class="input-count">
+          <input value="1" aria-label="input-count" type="number" class="input-count">
         </form>
         <a href="./../CartPage/cart.html">
           <button class="buy-btn">

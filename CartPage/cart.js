@@ -8,10 +8,10 @@ function appendCard(value) {
       <td>${value.size}</td>
       <td>${value.price}$</td>
       <td>
-        <input value="${value.count}" type="number" class="count-input">
+        <input value="${value.count}" aria-label="count-input" type="number" class="count-input">
       </td>
       <td>
-        <input class="delete-check" id="${value.id}" type="checkbox">
+        <input class="delete-check" aria-label="delete-check" id="${value.id}" type="checkbox">
       </td>
     </tr>
   `;
