@@ -23,7 +23,10 @@ $('.submit-btn').click((e) => {
 
   let findItem = getItem.find(element => element.userId === id && element.userPw === pw);
 
-  if(findItem == undefined){
+  if(id.length === 0 || pw.length === 0){
+    e.preventDefault();
+    return window.alert('ID, PW를 입력해주세요.');
+  } else if(findItem == undefined){
     e.preventDefault();
     return window.alert('ID, PW가 틀렸습니다.');
   } else {
