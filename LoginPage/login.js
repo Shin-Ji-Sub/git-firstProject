@@ -2,8 +2,6 @@
 // Nav List hover UI 기능
 $('.nav-list').on('mouseover', (e) => {
   let listWidth = parseInt($(e.currentTarget).css('width'));
-
-
   $(e.currentTarget).children('span').css('width', `${listWidth}`);
 });
 
