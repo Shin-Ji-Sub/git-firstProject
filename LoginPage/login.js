@@ -19,6 +19,7 @@ $('.submit-btn').click((e) => {
   let getItem = localStorage.getItem('user');
   getItem = JSON.parse(getItem);
 
+
   if(getItem !== null){
     let findItem = getItem.find(element => element.userId === id && element.userPw === pw);
     if(id.length === 0 || pw.length === 0){
@@ -30,7 +31,7 @@ $('.submit-btn').click((e) => {
     } else {
       localStorage.removeItem('nowUser');
       localStorage.setItem('nowUser', JSON.stringify(findItem));
-    }
+    } 
   } else {
     e.preventDefault();
     window.alert('ID, PW가 틀렸습니다.');
