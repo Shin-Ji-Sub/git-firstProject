@@ -19,16 +19,20 @@ $('.submit-btn').click((e) => {
   let getItem = localStorage.getItem('user');
   getItem = JSON.parse(getItem);
 
-  let findItem = getItem.find(element => element.userId === id && element.userPw === pw);
-
-  if(id.length === 0 || pw.length === 0){
-    e.preventDefault();
-    return window.alert('ID, PW를 입력해주세요.');
-  } else if(findItem == undefined){
-    e.preventDefault();
-    return window.alert('ID, PW가 틀렸습니다.');
+  if(getItem !== null){
+    let findItem = getItem.find(element => element.userId === id && element.userPw === pw);
+    if(id.length === 0 || pw.length === 0){
+      e.preventDefault();
+      return window.alert('ID, PW를 입력해주세요.');
+    } else if(findItem === undefined){
+      e.preventDefault();
+      return window.alert('ID, PW가 틀렸습니다.');
+    } else {
+      localStorage.removeItem('nowUser');
+      localStorage.setItem('nowUser', JSON.stringify(findItem));
+    }
   } else {
-    localStorage.removeItem('nowUser');
-    localStorage.setItem('nowUser', JSON.stringify(findItem));
+    e.preventDefault();
+    window.alert('ID, PW가 틀렸습니다.');
   }
 });
